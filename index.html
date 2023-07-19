@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="Luisangel Betancourt" />
+        <meta
+            name="keywords"
+            content="Simpson, Integrales Definidas, calculadora de simpson"
+        />
+        <meta
+            name="description"
+            content="Calculadora de Integrales definidas por Simpson 1/3"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="css/index.css" />
+        <title>Calculadora de Integrales definidas por Simpson 1/3</title>
+    </head>
+    <body>
+        <h1>Calculadora de:</h1>
+
+        <div class="container align-items-center">
+            <nav class="nav-menu">
+                <h3 id="g" class="active">Simpson 1/3</h3>
+            </nav>
+        </div>
+        <div class="container inter-data-collect">
+            <p>
+                Basandonos en la formula de Simpson 1/3 para integrales
+                definidas:
+            </p>
+            <img src="img/form I.PNG" alt="formula" />
+            <p>Solicitamos los siguientes datos:</p>
+            <form id="inter_form">
+                <!-- <div class="h">
+                    <img src="img/form II.PNG" alt="">
+                    <label for="n">n</label>
+                    <input type="number" name="n" id="n" required>
+                    <label for="xf">xf o limite superior</label>
+                    <input type="number" name="xf" id="xf" required>
+                    <label for="x1">x1 o limite inferior</label>
+                    <input type="number" name="x1" id="x1" required>
+                </div>
+                <label for="f">Funcion a integrar o "y"</label>
+                <input type="number" name="f" id="f" required> -->
+
+                <!-- Test -->
+
+                <div class="h">
+                    <img src="img/form II.PNG" alt="" />
+                    <label for="n">n</label>
+                    <input type="number" name="n" id="n" value="10" required />
+                    <label for="xf">xf o limite superior</label>
+                    <input type="number" name="xf" id="xf" value="0.8" step="any" required />
+                    <label for="x1">x1 o limite inferior</label>
+                    <input type="number" name="x1" id="x1" value="0" step="any" required />
+                </div>
+                <label for="f">Funcion a integrar o "y"</label>
+                <input
+                    type="text"
+                    name="f"
+                    id="f"
+                    value="400*x**5 - 900*x**4 + 675*x**3 - 200*x**2 + 25*x + 0.2"
+                    required
+                />
+                <p>Recuerda usar ** para tus exponenciales y no ^</p>
+
+                <button class="btn btn-primary" type="submit">Calcular</button>
+            </form>
+            <div>
+                <canvas id="myChart"></canvas>
+            </div>
+            <div id="resultDiv"></div>
+        </div>
+
+        <footer class="footer">
+            <p>
+                Desarrollado por Luisangel Betancourt para el sub-proyecto
+                "Metodos Numericos"
+            </p>
+            <a
+                href="https://github.com/Luisangelebp/Calculadora-de-Interpolacion-Lineal"
+                target="_blank"
+                ><i class="bi bi-github"></i
+            ></a>
+            <a
+                href="https://www.youtube.com/watch?v=LYMteeXA5oE"
+                target="_blank"
+                ><i class="bi bi-youtube"></i
+            ></a>
+        </footer>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.3.0/chart.umd.min.js"
+            integrity="sha512-TJ7U6JRJx5IpyvvO9atNnBzwJIoZDaQnQhb0Wmw32Rj5BQHAmJG16WzaJbDns2Wk5VG6gMt4MytZApZG47rCdg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script src="js/simpson.js"></script>
+    </body>
+</html>
