@@ -91,7 +91,12 @@ function grafico(f, ls, li) {
         arrData2[j - 1] = NaN;
     }
 
-    new Chart(ctx, {
+    if (window.grafica) {
+        window.grafica.clear();
+        window.grafica.destroy();
+    }
+    
+    window.grafica = new Chart(ctx, {
         type: 'line',
         data: {
             labels: xeje,
